@@ -20,4 +20,5 @@ jobs:
     - name: Install surge
       run: |
         npm install -g surge
+        cd build
         surge ./ https://usama-bootcamp2020-react.surge.sh/ --token ${{secrets.TOKEN}}

@@ -1,0 +1,24 @@
+name: Deploy react app to Surge
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup Node
+      uses: actions/setup-node@v1.4.2
+    - name: Build React App
+      run: |
+        npm install
+        npm run build
+    - name: Install surge
+      run: |
+        npm install -g surge
+        cd build
+        surge ./ https://usama-bootcamp2020-react.surge.sh/ --token ${{secrets.TOKEN}}

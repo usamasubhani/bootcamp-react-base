@@ -13,10 +13,15 @@ jobs:
 
     - name: Setup Node
       uses: actions/setup-node@v1.4.2
+    
+    - name: action-yarn
+      uses: comchangs/action-yarn@v0.1-beta
+    
     - name: Build React App
       run: |
-        npm install
-        npm run build
+        yarn build
+        #npm install
+        #npm run build
     - name: Install surge
       run: |
         npm install -g surge

@@ -23,7 +23,7 @@ jobs:
         npm install
         #yarn build
         #npm install
-        npm run build
+        CI=false npm run build
         
     - name: Install surge
       run: |

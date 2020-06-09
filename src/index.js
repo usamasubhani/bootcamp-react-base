@@ -2,11 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Hi from './Hi'
+// import Hi from './Hi'
+// import Room from './Room';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <Hi name="Usama"/>,
+  <App />,
   document.getElementById('root')
 );
 
